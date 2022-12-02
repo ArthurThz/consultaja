@@ -16,6 +16,7 @@
             "name": "Fernando Caldeira",
             "endereco": "Rua fernando caldeira, 205, 13 andar",
             "IdEspecialidade": 1,
+            "Especialidade": " Clinico Geral",
             "agenda": [
                 {
                     "dia": "",
@@ -27,6 +28,7 @@
             "name": "Gabriella Oliveira",
             "endereco": "Rua Gabriella Oliveira, 210",
             "IdEspecialidade": 2,
+            "Especialidade": "Alergista",
             "agenda": [
                 {
                     "dia": "",
@@ -38,6 +40,7 @@
             "name": "João das Neves",
             "endereco": "Rua João das Neves, 110",
             "IdEspecialidade": 3,
+            "Especialidade": "Cardiologista",
             "agenda": [
                 {
                     "dia": "",
@@ -49,6 +52,7 @@
             "name": "Douglas Ferreira",
             "endereco": "Rua Douglas Ferreira, 10",
             "IdEspecialidade": 4,
+            "Especialidade": "Endocrinologista",
             "agenda": [
                 {
                     "dia": "",
@@ -60,6 +64,7 @@
             "name": "José Bueno",
             "endereco": "Rua José Bueno, 100",
             "IdEspecialidade": 5,
+            "Especialidade": "Fisioterapeuta",
             "agenda": [
                 {
                     "dia": "",

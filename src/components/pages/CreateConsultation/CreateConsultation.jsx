@@ -7,7 +7,6 @@ function CreateConsultation() {
     const [Doctor, setDoctor] = useState([]);
     const [SelectedValue, setSelectedValue] = useState(0);
 
-    var currentName = ''
     // Consulta API de especialidades
     useEffect(() => {
         fetch('http://localhost:5000/specialty', {
@@ -17,6 +16,7 @@ function CreateConsultation() {
             }
         }).then((res) => res.json())
             .then((data) => setSpecialty(data))
+            .catch((err) => console.log(err))
     }, [])
 
 
@@ -31,16 +31,10 @@ function CreateConsultation() {
         }).then((res) => res.json())
             .then((data) => setDoctor(data))
             .catch((err) => console.log(err))
+            .catch((err) => console.log(err))
     }, [])
 
 
-
-
-
-
-
-
-    SelectedValue != 0 ? console.log(SelectedValue) : null
     return (
         <div>
             <h1>Nova Consulta</h1>
@@ -48,20 +42,23 @@ function CreateConsultation() {
                 <div className={styles.input_control}>
                     <label htmlFor="especialidade">Especialidade</label>
                     <select name="especialidade" onChange={e => setSelectedValue(e.target.value)} >
-
                         <option value={0} >Escolha uma opção</option>
+                        // Creates options with database values
                         {Specialty.map((item) =>
                             (<option value={item.id} key={item.id}>{item.name}</option>)
                         )}
-
                     </select>
                 </div>
                 <div className={styles.doctor_control}>
-
+                //  render the elements based on the selected options
                     {Doctor.map((item) => {
-                        item.IdEspecialidade == SelectedValue ? (<h1>{item.name}</h1>) : console.log('err')
-
-
+                        if (item.idEspecialidade != 0 && item.IdEspecialidade == SelectedValue) {
+                            return (<>
+                                <h1 key={11}>{`Doutor(a) ${item.name}`}</h1>
+                                <p key={12}>{`Especialidade:${item.Especialidade}`}</p>
+                                <p key={13}>{`Endereço: ${item.endereco}`}</p></>
+                            )
+                        }
                     })}
 
                     <button>Cofirmar</button>
