@@ -10,5 +10,84 @@
             "name": "Theodoro",
             "senha": "123321"
         }
+    ],
+    "doctor": [
+        {
+            "name": "Fernando Caldeira",
+            "endereco": "Rua fernando caldeira, 205, 13 andar",
+            "IdEspecialidade": 1,
+            "agenda": [
+                {
+                    "dia": "",
+                    "hora": ""
+                }
+            ]
+        },
+        {
+            "name": "Gabriella Oliveira",
+            "endereco": "Rua Gabriella Oliveira, 210",
+            "IdEspecialidade": 2,
+            "agenda": [
+                {
+                    "dia": "",
+                    "hora": ""
+                }
+            ]
+        },
+        {
+            "name": "João das Neves",
+            "endereco": "Rua João das Neves, 110",
+            "IdEspecialidade": 3,
+            "agenda": [
+                {
+                    "dia": "",
+                    "hora": ""
+                }
+            ]
+        },
+        {
+            "name": "Douglas Ferreira",
+            "endereco": "Rua Douglas Ferreira, 10",
+            "IdEspecialidade": 4,
+            "agenda": [
+                {
+                    "dia": "",
+                    "hora": ""
+                }
+            ]
+        },
+        {
+            "name": "José Bueno",
+            "endereco": "Rua José Bueno, 100",
+            "IdEspecialidade": 5,
+            "agenda": [
+                {
+                    "dia": "",
+                    "hora": ""
+                }
+            ]
+        }
+    ],
+    "specialty": [
+        {
+            "id": 1,
+            "name": "Clinico Geral"
+        },
+        {
+            "id": 2,
+            "name": "Alergista"
+        },
+        {
+            "id": 3,
+            "name": "Cardiologista"
+        },
+        {
+            "id": 4,
+            "name": "Endocrinologista"
+        },
+        {
+            "id": 5,
+            "name": "Fisioterapeuta"
+        }
     ]
 }
