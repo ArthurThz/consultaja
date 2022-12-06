@@ -61,6 +61,11 @@ function CreateConsultation() {
                         }
                     })}
                 </div>
+                <div className={styles.setDate}>
+                    <select name="data" >
+                        <option value={0}>Escolha uma data</option>
+                    </select>
+                </div>
                 <button className={styles.button}>Confirmar</button>
             </div>
         </div>
