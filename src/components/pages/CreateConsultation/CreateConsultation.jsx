@@ -35,6 +35,7 @@ function CreateConsultation() {
     }, [])
 
 
+
     return (
         <div>
             <div className={styles.container}>
@@ -51,21 +52,30 @@ function CreateConsultation() {
                 </div>
                 <div className={styles.doctor_control}>
                     {/* render the elements based on the selected options */}
-                    {Doctor.map((item) => {
+                    {Doctor.map((item, i) => {
                         if (item.idEspecialidade != 0 && item.IdEspecialidade == SelectedValue) {
                             return (<>
                                 <h1 key={11}>{`Doutor(a) ${item.name}`}</h1>
                                 <p key={12}>{`Especialidade: ${item.Especialidade}`}</p>
-                                <p key={13}>{`Endereço: ${item.endereco}`}</p></>
+                                <p key={13}>{`Endereço: ${item.endereco}`}</p>
+                                <div className={styles.setDate}>
+                                    <select name="data" >
+                                        <option value={0}>Escolha uma data</option>
+                                        {item.agenda.map((data, i) => {
+                                            return (<>
+                                                <option value={1} key={i}>{`${data.dia} as ${data.hora} horas `}</option>
+                                            </>)
+                                        })}
+                                    </select>
+                                </div>
+                            </>
                             )
                         }
                     })}
+
                 </div>
-                <div className={styles.setDate}>
-                    <select name="data" >
-                        <option value={0}>Escolha uma data</option>
-                    </select>
-                </div>
+
+
                 <button className={styles.button}>Confirmar</button>
             </div>
         </div>
