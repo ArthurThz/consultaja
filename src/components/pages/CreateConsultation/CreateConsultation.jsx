@@ -6,6 +6,8 @@ function CreateConsultation() {
     const [Specialty, setSpecialty] = useState([]);
     const [Doctor, setDoctor] = useState([]);
     const [SelectedValue, setSelectedValue] = useState(0);
+    const [Data, setData] = useState('');
+    const [CurrentData, setCurrentData] = useState('');
 
     // Consulta API de especialidades
     useEffect(() => {
@@ -34,7 +36,10 @@ function CreateConsultation() {
             .catch((err) => console.log(err))
     }, [])
 
-
+    const handleOnChangeTeste = ((e) => {
+        let value = e.target.value
+        setData(value)
+    })
 
     return (
         <div>
@@ -72,10 +77,8 @@ function CreateConsultation() {
                             )
                         }
                     })}
-
+                    <input type="date" name="" id="" onChange={handleOnChangeTeste} />
                 </div>
-
-
                 <button className={styles.button}>Confirmar</button>
             </div>
         </div>
