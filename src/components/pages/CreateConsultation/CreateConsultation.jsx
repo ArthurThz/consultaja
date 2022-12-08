@@ -6,8 +6,9 @@ function CreateConsultation() {
     const [Specialty, setSpecialty] = useState([]);
     const [Doctor, setDoctor] = useState([]);
     const [SelectedValue, setSelectedValue] = useState(0);
+
     const [Data, setData] = useState('');
-    const [CurrentData, setCurrentData] = useState('');
+
 
     // Consulta API de especialidades
     useEffect(() => {
@@ -36,11 +37,6 @@ function CreateConsultation() {
             .catch((err) => console.log(err))
     }, [])
 
-    const handleOnChangeTeste = ((e) => {
-        let value = e.target.value
-        setData(value)
-    })
-
     return (
         <div>
             <div className={styles.container}>
@@ -49,35 +45,42 @@ function CreateConsultation() {
                     <label htmlFor="especialidade">Especialidade</label>
                     <select name="especialidade" onChange={e => setSelectedValue(e.target.value)} >
                         <option value={0}>Escolha uma opção</option>
+
                         {/* Creates options with database values */}
-                        {Specialty.map((item) =>
-                            (<option value={item.id} key={item.id}>{item.name}</option>)
-                        )}
+                        {Specialty.map((item) => (<option value={item.id} key={item.id}>{item.name}</option>))}
+
                     </select>
                 </div>
                 <div className={styles.doctor_control}>
-                    {/* render the elements based on the selected options */}
+                    {/* renders the elements based on the selected options */}
                     {Doctor.map((item, i) => {
                         if (item.idEspecialidade != 0 && item.IdEspecialidade == SelectedValue) {
+
                             return (<>
                                 <h1 key={11}>{`Doutor(a) ${item.name}`}</h1>
                                 <p key={12}>{`Especialidade: ${item.Especialidade}`}</p>
                                 <p key={13}>{`Endereço: ${item.endereco}`}</p>
+
                                 <div className={styles.setDate}>
-                                    <select name="data" >
-                                        <option value={0}>Escolha uma data</option>
+                                    <select name="data"
+
+                                        // SetData receives the day and hour selected
+                                        onChange={(e) => { e.target.value != "default" ? setData(item.agenda[e.target.value]) : null }
+                                        }>
+                                        <option value="default">Escolha uma data</option>
+
+                                        {/* Renders just avaliable dates */}
                                         {item.agenda.map((data, i) => {
                                             return (<>
-                                                <option value={1} key={i}>{`${data.dia} as ${data.hora} horas `}</option>
+                                                <option value={i} key={i}>{`${data.dia} as ${data.hora} horas `}</option>
                                             </>)
+
                                         })}
                                     </select>
                                 </div>
-                            </>
-                            )
+                            </>)
                         }
                     })}
-                    <input type="date" name="" id="" onChange={handleOnChangeTeste} />
                 </div>
                 <button className={styles.button}>Confirmar</button>
             </div>
