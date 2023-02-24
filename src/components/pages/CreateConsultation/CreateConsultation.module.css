@@ -1,0 +1,71 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em 2em;
+
+    min-height: 70vh;
+    height: 100%;
+    width: 100%;
+
+
+    background-color: rgba(161, 201, 241, 0.876);
+}
+
+.input_control {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 1.5em;
+
+    width: 40%;
+    height: 5em;
+}
+
+.input_control label {
+    font-size: 1em;
+}
+
+.input_control select {
+    width: 50%;
+    height: 2em;
+
+    font-size: .9em;
+}
+
+.doctor_control {
+    width: 50%;
+
+    gap: 1.5em;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 1em 1em;
+}
+
+.doctor_control h1 {
+    font-size: 1.6em;
+}
+
+.doctor_control p {
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.button {
+    height: 2.2em;
+    width: 11em;
+
+    border: none;
+    border-radius: .5em;
+
+    margin-top: 1em;
+
+    font-size: 1em;
+    font-weight: bold;
+
+    cursor: pointer;
+}

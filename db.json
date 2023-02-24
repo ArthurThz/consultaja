@@ -10,5 +10,97 @@
             "name": "Theodoro",
             "senha": "123321"
         }
+    ],
+    "doctor": [
+        {
+            "name": "Fernando Caldeira",
+            "endereco": "Rua fernando caldeira, 205, 13 andar",
+            "IdEspecialidade": 1,
+            "Especialidade": " Clinico Geral",
+            "agenda": [
+                {
+                    "dia": "10/12/2022",
+                    "hora": "9:00"
+                },
+                {
+                    "dia": "20/12/2022",
+                    "hora": "10:00"
+                },
+                {
+                    "dia": "30/12/2022",
+                    "hora": "11:00"
+                }
+            ]
+        },
+        {
+            "name": "Gabriella Oliveira",
+            "endereco": "Rua Gabriella Oliveira, 210",
+            "IdEspecialidade": 2,
+            "Especialidade": "Alergista",
+            "agenda": [
+                {
+                    "dia": "15/11/2022",
+                    "hora": "14:00"
+                }
+            ]
+        },
+        {
+            "name": "João das Neves",
+            "endereco": "Rua João das Neves, 110",
+            "IdEspecialidade": 3,
+            "Especialidade": "Cardiologista",
+            "agenda": [
+                {
+                    "dia": "01/11/2022",
+                    "hora": "11:00"
+                }
+            ]
+        },
+        {
+            "name": "Douglas Ferreira",
+            "endereco": "Rua Douglas Ferreira, 10",
+            "IdEspecialidade": 4,
+            "Especialidade": "Endocrinologista",
+            "agenda": [
+                {
+                    "dia": "02/11/2022",
+                    "hora": "17:00"
+                }
+            ]
+        },
+        {
+            "name": "José Bueno",
+            "endereco": "Rua José Bueno, 100",
+            "IdEspecialidade": 5,
+            "Especialidade": "Fisioterapeuta",
+            "agenda": [
+                {
+                    "dia": "30/12/2022",
+                    "hora": "15:00"
+                }
+            ]
+        }
+    ],
+    "specialty": [
+        {
+            "id": 1,
+            "name": "Clinico Geral"
+        },
+        {
+            "id": 2,
+            "name": "Alergista"
+        },
+        {
+            "id": 3,
+            "name": "Cardiologista"
+        },
+        {
+            "id": 4,
+            "name": "Endocrinologista"
+        },
+        {
+            "id": 5,
+            "name": "Fisioterapeuta"
+        }
     ]
 }
